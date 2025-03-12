@@ -2,10 +2,8 @@ name: Trigger
 
 on:
   workflow_dispatch:
-    inputs:
-      skip_DoLModLoaderBuild:
-        description: "yes to skip DoLModLoaderBuild"
-        required: false
+  schedule:
+    - cron: "33 17 * * *"
 
 env:
   GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
@@ -19,10 +17,11 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
+          persist-credentials: false
       - name: run script
         run: |
-          ORIGIN_TAG=$(curl -s https://api.github.com/repos/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/releases/latest | jq -r '.tag_name')
-          CHS_VER=$(echo $ORIGIN_TAG | cut -d '-' -f3)
+          ORIGIN_TAG=$(curl -s https://api.github.com/repos/DoL-Lyra/Lyra/releases/latest | jq -r '.tag_name')
+          CHS_VER=$(echo $ORIGIN_TAG | cut -d '-' -f2)
           MODS_VER=$(git tag --sort=-v:refname | head -n 1 | cut -d '-' -f2)
 
           if [[ "$CHS_VER" != "$MODS_VER" ]]
@@ -41,29 +40,20 @@ jobs:
             echo "NEED_UPDATE=false" >> "$GITHUB_ENV"
           fi
 
-      - name: Trigger DoL-Lyra/DoLModLoaderBuild/Update-Submodules.yaml
-        uses: convictional/trigger-workflow-and-wait@v1.6.5
-        if: env.NEED_UPDATE == 'true' && inputs.skip_DoLModLoaderBuild != 'yes'
-        with:
-          owner: DoL-Lyra
-          repo: DoLModLoaderBuild
-          ref: master
-          workflow_file_name: Update-Submodules.yaml
-          github_token: ${{ secrets.GH_PAT_LYRA }}
-
-      - name: Trigger DoL-Lyra/DoLModLoaderBuild/Build-Html-Package.yml
-        uses: convictional/trigger-workflow-and-wait@v1.6.5
-        if: env.NEED_UPDATE == 'true' && inputs.skip_DoLModLoaderBuild != 'yes'
-        with:
-          owner: DoL-Lyra
-          repo: DoLModLoaderBuild
-          ref: master
-          workflow_file_name: Build-Html-Package.yml
-          github_token: ${{ secrets.GH_PAT_LYRA }}
-
       - name: Create tag
         if: env.NEED_UPDATE == 'true'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.NEW_TAG }}
           draft: true
+
+      - name: Create and push tag
+        if: env.NEED_UPDATE == 'true'
+        run: |
+          git config user.email "${{ secrets.GIT_EMAIL }}"
+          git config user.name "${{ secrets.GIT_USERNAME }}"
+          git remote set-url origin https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}
+          git commit --allow-empty -m ${{ env.NEW_TAG }}
+          git push origin
+          git tag ${{ env.NEW_TAG }}
+          git push origin ${{ env.NEW_TAG }}
