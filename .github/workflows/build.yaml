@@ -114,7 +114,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        pack: [zip, apk]
+        pack: [zip]
         code:
           [261]
     steps:
