@@ -53,6 +53,22 @@ jobs:
           git config user.email "${{ secrets.GIT_EMAIL }}"
           git config user.name "${{ secrets.GIT_USERNAME }}"
           git remote set-url origin https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}
+          # 添加上游远程仓库
+          git remote add upstream https://github.com/DoL-Lyra/Lyra.git
+          git fetch upstream
+          
+          # 更新main分支
+          git checkout main
+          git pull upstream main
+          git push origin main
+          
+          # 更新hub分支
+          git checkout hub
+          git pull upstream hub
+          git push origin hub
+          
+          # 回到之前的分支创建标签
+          git checkout -
           git commit --allow-empty -m ${{ env.NEW_TAG }}
           git push origin
           git tag ${{ env.NEW_TAG }}
