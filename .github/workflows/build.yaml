@@ -204,7 +204,7 @@ jobs:
       - name: Unzip Package
         run: |
           mkdir outputs/pages
-          unzip -q outputs/DoL-*-besc-wax-csd-ucb-*.zip -d outputs/pages
+          unzip -q outputs/DoL-*-besc-csd-ucb-*.zip -d outputs/pages
           
       - name: Upload to gitpages
         uses: peaceiris/actions-gh-pages@v3
