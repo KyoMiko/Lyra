@@ -63,12 +63,12 @@ jobs:
           git push origin main
           
           # 更新hub分支
-          git checkout hub
+          git checkout --track origin/hub
           git pull upstream hub
           git push origin hub
           
           # 回到之前的分支创建标签
-          git checkout -
+          git checkout main
           git commit --allow-empty -m ${{ env.NEW_TAG }}
           git push origin
           git tag ${{ env.NEW_TAG }}
