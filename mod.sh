@@ -3,6 +3,7 @@
 set -e
 
 #[
+#     "AU",     1024
 #     "GOOSE",  512
 #     "UCB",    256
 #     "SUSATO", 128
@@ -31,7 +32,7 @@ IS_POLYFILL=0
 
 # 资源地址
 # 工具
-URL_APKTOOL=https://github.com/iBotPeaches/Apktool/releases/download/v2.10.0/apktool_2.10.0.jar
+URL_APKTOOL=https://github.com/iBotPeaches/Apktool/releases/download/v2.12.0/apktool_2.12.0.jar
 URL_APKSIGN=https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3.0/uber-apk-signer-1.3.0.jar
 # 资源
 # URL_BES=https://gitgud.io/BEEESSS/degrees-of-lewdity-graphics-mod/-/raw/master/img.zip
@@ -40,6 +41,7 @@ URL_APKSIGN=https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3
 # URL_AVATAR_BJ=https://gitgud.io/GTXMEGADUDE/double-cheeseburger/-/raw/master/Paril_BJ_BEEESSS_Addon.rar
 # URL_UCB=https://github.com/site098/mysterious/releases/download/%E9%A2%84%E5%8F%91%E5%B8%83/default.zip
 URL_DOLP_BASE="https://gitgud.io/Frostberg/degrees-of-lewdity-plus/-/archive/master/degrees-of-lewdity-plus-master.tar.gz?path=imagepacks"
+URL_AU=https://github.com/DoL-Lyra/assets/releases/download/assets/AU3.0.imgpack_v0.4.0.zip
 
 EXTRACT_DIR=extract # 解压目录
 OUTPUT_DIR=output   # 输出目录
@@ -177,6 +179,12 @@ fun_check_code() {
     OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-goose
     echo 512-Complete patch sideview type goose!
   fi
+  if [ $((MOD_CODE & 1024)) -ne 0 ]; then
+    echo 1024-Start patch sideview type AU...
+    fun_sideview_au
+    OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-au
+    echo 1024-Complete patch sideview type AU!
+  fi
   if [ $((MOD_CODE & 256)) -ne 0 ]; then
     echo 256-Start patch Universal Combat Beautification...
     fun_ucb
@@ -313,6 +321,22 @@ fun_sideview_goose() {
   popd || exit
 
   cp -r $BEAUTIFY_DIR/img/* $IMG_PATH/
+}
+
+# AU 特写
+fun_sideview_au() {
+  BEAUTIFY_DIR="sideview_au"
+  mkdir -p $BEAUTIFY_DIR
+
+  pushd $BEAUTIFY_DIR || exit
+
+  wget -q -O au.zip "$URL_AU"
+  unzip -q au.zip
+  rm au.zip
+
+  popd || exit
+
+  cp -r $BEAUTIFY_DIR/* $IMG_PATH/
 }
 
 # UCB
