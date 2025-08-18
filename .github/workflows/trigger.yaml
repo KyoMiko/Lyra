@@ -52,6 +52,7 @@ jobs:
         run: |
           git config user.email "${{ secrets.GIT_EMAIL }}"
           git config user.name "${{ secrets.GIT_USERNAME }}"
+          git config pull.rebase false
           git remote set-url origin https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}
           # 添加上游远程仓库
           git remote add upstream https://github.com/DoL-Lyra/Lyra.git
