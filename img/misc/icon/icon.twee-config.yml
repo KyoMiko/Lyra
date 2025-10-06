@@ -43,6 +43,7 @@ sugarcube-2:
         ![bailey](./antiques/antique_bailey.png)
         ![bell](./antiques/antique_bell.png)
         ![brass_statuette](./antiques/antique_brass_statuette.png)
+        ![bucket](./antiques/antique_bucket.png)
         ![bullet](./antiques/antique_bullet.png)
         ![candlestick](./antiques/antique_candlestick.png)
         ![cane](./antiques/antique_cane.png)
@@ -70,9 +71,11 @@ sugarcube-2:
         ![gold_ring](./antiques/antique_gold_ring.png)
         ![grenade](./antiques/antique_grenade.png)
         ![horn](./antiques/antique_horn.png)
+        ![horn_2](./antiques/antique_horn_2.png)
         ![hourglass](./antiques/antique_hourglass.png)
         ![incense](./antiques/antique_incense.png)
         ![islander_arrow](./antiques/antique_islander_arrow.png)
+        ![islander_mask](./clothes/islander_mask.png)
         ![ivory_box](./antiques/antique_ivory_box.png)
         ![ivory_necklace](./clothes/ivory_necklace.png)
         ![ivory_statuette](./antiques/antique_ivory_statuette.png)
@@ -85,19 +88,21 @@ sugarcube-2:
         ![silver_crown](./antiques/antique_silver_crown.png)
         ![silver_dagger](./antiques/antique_silver_dagger.png)
         ![silver_goblet](./antiques/antique_silver_goblet.png)
+        ![silver_manacle](./antiques/antique_silver_manacle.gif)
         ![silver_mask](./antiques/antique_silver_mask.png)
         ![silver_ring](./antiques/antique_silver_ring.png)
+        ![snuffer](./antiques/antique_snuffer.png)
         ![talisman](./clothes/holy_pendant.png)
         ![tea](./antiques/antique_tea.png)
         ![trilobite](./antiques/antique_trilobite.png)
         ![watch](./antiques/antique_watch.gif)
-        ![islander_mask](./clothes/islander_mask.png)
+        ![whip](./antiques/antique_whip.png)
 
         `<<antiqueicon iconName?>>`
         - **iconName** _optional_: `string` - filename (not including `antique_` namespace or `.png` extension)
-          - `"arrow"` | `"artillery"` | `"bailey"` | `"bell"` | `"brass_statuette"` |  `"bullet"` | `"candlestick"` | `"cane"` | `"chastity"` | `"chocolate"` | `"copper_coin"` | `"copper_ring"` | `"coral_ring"` | `"crystal_pink"` | `"crystal"` | `"cup"` | `"cutlass"` | `"dagger"` | `"dildo"` | `"disc"` | `"fetish"` | `"figurine"` | `"forest_gem"` | `"gold_brooch"` | `"gold_coin"` | `"gold_necklace"` | `"gold_ring"` |`"grenade"` | `"horn"` | `"hourglass"` | `"incense"` | `"islander_arrow"` | `"islander_mask"` | `"ivory_box"` | `"ivory_statuette"` | `"map"` | `"rusted_cutlass"` | `"shell"` | `"silver_blade"` | `"silver_brooch"` | `"silver_coin"` | `"silver_compass"` | `"silver_crown"` | `"silver_dagger"` | `"silver_goblet"` | `"silver_mask"` | `"silver_ring"` | `"talisman"` | `"tea"` | `"trilobite"` | `"watch"`
+          - `"arrow"` | `"artillery"` | `"bailey"` | `"bell"` | `"brass_statuette"` | `"bucket"` |  `"bullet"` | `"candlestick"` | `"cane"` | `"chastity"` | `"chocolate"` | `"copper_coin"` | `"copper_ring"` | `"coral_ring"` | `"crystal_pink"` | `"crystal"` | `"cup"` | `"cutlass"` | `"dagger"` | `"dildo"` | `"disc"` | `"fetish"` | `"figurine"` | `"forest_gem"` | `"gold_brooch"` | `"gold_coin"` | `"gold_necklace"` | `"gold_ring"` |`"grenade"` | `"horn"` | `"horn_2"` | `"hourglass"` | `"incense"` | `"islander_arrow"` | `"islander_mask"` | `"ivory_box"` | `"ivory_statuette"` | `"map"` | `"rusted_cutlass"` | `"shell"` | `"silver_blade"` | `"silver_brooch"` | `"silver_coin"` | `"silver_compass"` | `"silver_crown"` | `"silver_dagger"` | `"silver_goblet"` | `"silver_manacle"` | `"silver_mask"` | `"silver_ring"` | `"snuffer"` | `"talisman"` | `"tea"` | `"trilobite"` | `"watch"` | `"whip"`
       parameters:
-        - '|+ "arrow"|"artillery"|"bailey"|"bell"|"brass_statuette"|"bullet"|"candlestick"|"cane"|"chastity"|"chocolate"|"copper_coin"|"copper_compass"|"copper_ring"|"coral_ring"|"crystal_pink"|"crystal"|"cup"|"cutlass"|"dagger"|"diamond"|"dildo"|"disc"|"fetish"|"figurine"|"forest_gem"|"gold_brooch"|"gold_coin"|"gold_compass"|"gold_necklace"|"gold_ring"|"grenade"|"horn"|"hourglass"|"incense"|"islander_arrow"|"islander_mask"|"ivory_box"|"ivory_statuette"|"map"|"rusted_cutlass"|"shell"|"silver_blade"|"silver_brooch"|"silver_coin"|"silver_compass"|"silver_crown"|"silver_dagger"|"silver_goblet"|"silver_mask"|"silver_ring"|"talisman"|"tea"|"trilobite"|"watch"'
+        - '|+ "arrow"|"artillery"|"bailey"|"bell"|"brass_statuette"|"bucket"|"bullet"|"candlestick"|"cane"|"chastity"|"chocolate"|"copper_coin"|"copper_compass"|"copper_ring"|"coral_ring"|"crystal_pink"|"crystal"|"cup"|"cutlass"|"dagger"|"diamond"|"dildo"|"disc"|"fetish"|"figurine"|"forest_gem"|"gold_brooch"|"gold_coin"|"gold_compass"|"gold_necklace"|"gold_ring"|"grenade"|"horn"|"horn_2"|"hourglass"|"incense"|"islander_arrow"|"islander_mask"|"ivory_box"|"ivory_statuette"|"map"|"rusted_cutlass"|"shell"|"silver_blade"|"silver_brooch"|"silver_coin"|"silver_compass"|"silver_crown"|"silver_dagger"|"silver_goblet"|"silver_manacle"|"silver_mask"|"silver_ring"|"snuffer"|"talisman"|"tea"|"trilobite"|"watch"|"whip"'
       tags: ["img"]
     arcadeicon:
       description: "![arcadeicon](./arcade.gif)"
@@ -138,13 +143,14 @@ sugarcube-2:
         ![robe](./clothes/bathrobe.png)
         ![shave](./shave.png)
         ![toilet](./toilet.png)
+        ![toothbrush](./toothbrush.png)
         ![default](./bathroom.png)
 
         `<<bathroomicon iconName?>>`
         - **iconName** _optional_: `string` - interest point
-          - `"soap"` | `"shower"` | `"sink"` | `"bath"` | `"robe"` | `"shave"` | `"toilet"` | `default`
+          - `"soap"` | `"shower"` | `"sink"` | `"bath"` | `"robe"` | `"shave"` | `"toilet"` | `"toothbrush"` | `default`
       parameters:
-        - '|+ "soap"|"shower"|"sink"|"bath"|"robe"|"shave"|"toilet"'
+        - '|+ "soap"|"shower"|"sink"|"bath"|"robe"|"shave"|"toilet"|"toothbrush"'
       tags: ["img"]
     beachicon:
       description: |-
@@ -181,7 +187,7 @@ sugarcube-2:
 
         `<<bedicon iconName?>>`
         - **iconName** _optional_: `string` - type
-          - `"zzz"` | `"single"` | `"double"` | `"deluxe"` | `"eden"` | `"exotic"` | `"hospital"` | `"kylar"` | `"parents"` | `"wicker"` | `"yellow"` | `default`
+          - `"zzz"` | `"single"` | `"double"` | `"deluxe"` | `"eden"` | `"farm"` | `"alex"` | `"exotic"` | `"hospital"` | `"kylar"` | `"parents"` | `"wicker"` | `"yellow"` | `default`
       parameters:
         - '|+ "zzz"|"single"|"double"|"deluxe"|"eden"|"exotic"|"hospital"|"kylar"|"parents"|"wicker"|"yellow"'
       tags: ["img"]
@@ -465,7 +471,7 @@ sugarcube-2:
         ![default](./condom.png)
 
         `<<condomicon iconName?>>`
-        - **iconName** _optional_: `string` -  type
+        - **iconName** _optional_: `string` - type
           - `"machine"` | `default`
       parameters:
         - '|+ "machine"'
@@ -571,8 +577,6 @@ sugarcube-2:
 
         ![coat stand](./coatstand.png)
         ![curtains](./curtains.png)
-        ![fix](./hammer_nails.png)
-        ![radio](./radio.png)
         ![rug](./rug.png)
         ![scarf](./clothes/scarf.png)
         ![salve](./salve.png)
@@ -582,10 +586,10 @@ sugarcube-2:
 
         `<<edenicon iconName?>>`
         - **iconName** _optional_: `string` - interest point
-          - `"broom"` | `"coat stand"` | `"curtains"` | `"fix"` | `"radio"` | `"rug"` | `"scarf"` | `"salve"` | `"soap"` | `"supplies"` | `"target"` | `default`
+          - `"coat stand"` | `"curtains"` | `"rug"` | `"scarf"` | `"salve"` | `"soap"` | `"supplies"` | `"target"` | `default`
       parameters:
-        - '|+ "broom"|"coat
-          stand"|"curtains"|"fix"|"radio"|"rug"|"scarf"|"salve"|"soap"|"supplies"|"target"'
+        - '|+ "coat
+          stand"|"curtains"|"rug"|"scarf"|"salve"|"soap"|"supplies"|"target"'
       tags: ["img"]
     elkicon:
       description: "![elkicon](./elk.png)"
@@ -624,6 +628,8 @@ sugarcube-2:
         ![grass](./grass.png)
         ![kennel](./kennel.png)
         ![lab](./farm_lab.gif)
+        ![milk](./milk_machine.png)
+        ![bucket](./milk_bucket.png)
         ![meadow](./meadow.png)
         ![relax](./farm_alexrelax.png)
         ![tv](./TV.gif)
@@ -632,9 +638,9 @@ sugarcube-2:
 
         `<<farmicon iconName?>>`
         - **iconName** _optional_: `string` - interest point
-          - `"alexbed"` | `"alexdesk"` | `"barn"` | `"clear yard"` | `"cottage"` | `"grass"` | `"kennel"` | `"lab"` | `"meadow"` | `"relax"` | `"tv"` | `"parasitebarn"` | `default`
+          - `"alexbed"` | `"alexdesk"` | `"barn"` | `"clear yard"` | `"cottage"` | `"grass"` | `"kennel"` | `"lab"` | `"meadow"` | `"milk"` | `"bucket"` | `"relax"` | `"tv"` | `"parasitebarn"` | `default`
       parameters:
-        - '|+ "barn"|"alexbed"|"alexdesk"|"clear yard"|"cottage"|"grass"|"kennel"|"lab"|"meadow"|"relax"|"tv"|"parasitebarn"'
+        - '|+ "barn"|"alexbed"|"alexdesk"|"clear yard"|"cottage"|"grass"|"kennel"|"lab"|"meadow"|"milk"|"bucket"|"relax"|"tv"|"parasitebarn"'
       tags: ["img"]
     femaleicon:
       description: "![femaleicon](./female.png)"
@@ -666,7 +672,7 @@ sugarcube-2:
       description: |-
         Prints a food icon
 
-        ![autumnale](./food/autumn_ale.png)
+        ![autumnale](./food/autumnale.png)
         ![beer](./food/beer.png)
         ![beerbottle](./food/beerbottle.png)
         ![buns](./food/creambun.png)
@@ -675,7 +681,7 @@ sugarcube-2:
         ![creambun](./food/creambun.png)
         ![eat](./food/eat.png)
         ![fruitsalad](./food/fruitsalad.png)
-        ![fruityale](./food/fruity_ale.png)
+        ![fruityale](./food/fruityale.png)
         ![gingerbread](./food/gingerbread.png)
         ![halloween](./food/halloween.png)
         ![lemonade](./food/lemonade.png)
@@ -685,7 +691,7 @@ sugarcube-2:
         ![shandy](./food/shandy.png)
         ![strawberrylemonade](./food/strawberrylemonade.png)
         ![sweets](./food/sweets.png)
-        ![winterale](./food/winter_ale.png)
+        ![winterale](./food/winterale.png)
 
         `<<foodicon iconName?>>`
         - **iconName** _optional_: `string` - filename (not including `food/` directory or `.png` extension)
@@ -838,7 +844,7 @@ sugarcube-2:
 
         `<<gardenicon iconName?>>`
         - **iconName** _optional_: `string` - object
-          - `"fertiliser"` | `"flower"` | `"kylar"` | `"overgrown` | `"plot"` | `"strangled"` | `"tangled"` | `"till"` | `"water"` | `"weeds"` | `default`
+          - `"fertiliser"` | `"flower"` | `"kylar"` | `"overgrown"` | `"plot"` | `"strangled"` | `"tangled"` | `"till"` | `"water"` | `"weeds"` | `default`
       parameters:
         - '|+ "fertiliser"|"flower"|"kylar"|"overgrown"|"plot"|"strangled"|"tangled"|"till"|"water"|"weeds"'
       tags: ["img"]
@@ -949,7 +955,7 @@ sugarcube-2:
       description: |-
         Prints a heels icon
 
-        ![hobble](./hobbleheels.png)
+        ![hobble](./actions/hobbleheels.png)
         ![default](./exerciseheels.png)
 
         `<<heelsicon iconName?>>`
@@ -1050,7 +1056,8 @@ sugarcube-2:
         ![field office](./field_office.png)
         ![fishing](./fishing.png)
         ![firepit](./birdTower/firepit_bonfire_4.gif)
-        ![meditate](./meditate.png)
+        ![meditate](./actions/meditate.png)
+        ![plinth](./plinth.png)
         ![pond](./pond.png)
         ![pond twigs](./pond_twig.png)
         ![pots](./pots.png)
@@ -1060,9 +1067,9 @@ sugarcube-2:
 
         `<<lakeicon iconName?>>`
         - **iconName** _optional_: `string` - interest point
-          - `"campfire"` | `"dock"` | `"field office"` | `"fishing"` | `"firepit"` | `"meditate"` | `"pond"` | `"pond twigs"` | `"pots"` | `"skate"` | `"waterfall"` | `default`
+          - `"campfire"` | `"dock"` | `"field office"` | `"fishing"` | `"firepit"` | `"meditate"` | `"plinth"` | `"pond"` | `"pond twigs"` | `"pots"` | `"skate"` | `"waterfall"` | `default`
       parameters:
-        - '|+ "campfire"|"dock"|"field office"|"fishing"|"firepit"|"meditate"|"pond"|"pond twigs"|"pots"|"skate"|"waterfall"'
+        - '|+ "campfire"|"dock"|"field office"|"fishing"|"firepit"|"meditate"|"plinth"|"pond"|"pond twigs"|"pots"|"skate"|"waterfall"'
       tags: ["img"]
     landfillicon:
       description: "![landfillicon](./rubbish.png)"
@@ -1085,6 +1092,7 @@ sugarcube-2:
         Prints a lock-related icon
 
         ![bronze key](./key_bronze.png)
+        ![gate](./gate.png)
         ![iron key](./key_iron.png)
         ![key](./key_cabinet.png)
         ![old key](./key_old.png)
@@ -1094,9 +1102,9 @@ sugarcube-2:
 
         `<<lockicon iconName?>>`
         - **iconName** _optional_: `string` - state
-          - `"bronze key"` | `"iron key"` | `"key"` | `"old key"` | `"pick"` | `"unlock"` | `default`
+          - `"bronze key"` | `"iron key"` | `"key"` | `"old key"` | `"pick"` | `"unlock"` | "gate" | `default`
       parameters:
-        - '|+ "bronze key"|"iron key"|"key"|"old key"|"pick"|"unlock"'
+        - '|+ "bronze key"|"gate"|"iron key"|"key"|"old key"|"pick"|"unlock"'
       tags: ["img"]
     lofticon:
       description: "![lofticon](./loft.png)"
@@ -1163,7 +1171,18 @@ sugarcube-2:
         - '|+ "nest"|"perch"|"sing"|"rainwater"|"remy"|"remy cottage"|"tower"|"firepit"'
       tags: ["img"]
     museumicon:
-      description: "![museumicon](./museum.png)"
+      description: |-
+        Prints a museum icon
+
+        ![horse](./museum_horse.png)
+        ![duck](./museum_duck.png)
+        ![default](./museum.png)
+
+        `<<museumicon iconName>>`
+        - **iconName**: `string` - filename (not including extension)
+          - `"files"` | `default`
+      parameters:
+        - '|+ "horse"|"duck"'
       tags: ["img"]
     mysteryicon:
       description: "![mysteryicon](./ask.png)"
@@ -1417,6 +1436,7 @@ sugarcube-2:
 
         ![building](./schoolnew.png)
         ![courtyard](./actions/school_courtyard.png)
+        ![hallways](./hallways.png)
         ![headdesk](./headdesk.png)
         ![infirmary](./infirmary.png)
         ![library](./library.png)
@@ -1426,9 +1446,9 @@ sugarcube-2:
 
         `<<schoolicon iconName?>>`
         - **iconName** _optional_: `string` - interest point
-          - `"building"` | `"courtyard"` | `"headdesk"` | `"infirmary"` | `"library"` | `"library desk"` | `"stump"` | `default`
+          - `"building"` | `"courtyard"` | `"hallways"` | `"headdesk"` | `"infirmary"` | `"library"` | `"library desk"` | `"stump"` | `default`
       parameters:
-        - '|+ "building"|"courtyard"|"headdesk"|"infirmary"|"library"|"library desk"|"stump"'
+        - '|+ "building"|"courtyard"|"hallways"|"headdesk"|"infirmary"|"library"|"library desk"|"stump"'
       tags: ["img"]
     scienceicon:
       description: |-
@@ -1486,13 +1506,17 @@ sugarcube-2:
         ![smalldildo](./sexToys/dildo_small.png)
         ![strap-on](./sexToys/strap-on.png)
         ![stroker](./sexToys/onahole.png)
+        ![flogger](./sexToys/flogger.png)
+        ![paddle](./sexToys/paddle.png)
+        ![candle](./sexToys/candle.png)
+        ![tickler](./sexToys/tickler.png)
         ![default](./sexToys/bulletvibe.png)
 
         `<<sextoysicon iconName?>>`
         - **iconName** _optional_: `string` - type
-          - `"anal beads"` | `"dildo"` | `"horse strap-on"` | `"knotted strap-on"` | `"lube"` | `"pump"` | `"smalldildo"` | `"strap-on"` | `"stroker"` | `default`
+          - `"anal beads"` | `"dildo"` | `"horse strap-on"` | `"knotted strap-on"` | `"lube"` | `"pump"` | `"smalldildo"` | `"strap-on"` | `"stroker"` | `"flogger"` | `"paddle"` | `"candle"` | `"tickler"` | `"default"`
       parameters:
-        - '|+ "anal beads"|"dildo"|"horse strap-on"|"knotted strap-on"|"lube"|"pump"|"smalldildo"|"strap-on"|"stroker"'
+        - '|+ "anal beads"|"dildo"|"horse strap-on"|"knotted strap-on"|"lube"|"pump"|"smalldildo"|"strap-on"|"stroker"|"flogger"|"paddle"|"candle"|"tickler"|"default"'
       tags: ["img"]
     shavestyleicon:
       description: |-
@@ -1527,7 +1551,7 @@ sugarcube-2:
         ![forest](./forestshop.png)
         ![tailor](./tailorThread.png)
         ![tattoo](./tattoo.png)
-        ![toy](./toyshop2.png)
+        ![toy](./toyshop.png)
         ![register](./cash_register.png)
         ![default](./shopping_centre.png)
 
@@ -1541,6 +1565,8 @@ sugarcube-2:
       description: |-
         Prints a composite icon modified by pc's skin colour
 
+        ![banish_skin](./banish_skin.png)
+        ![banish_front](./banish_front.png)
         ![chef_skin](./chef_hands.png)
         ![chef_front](./chef_bowl.png)
         ![give_skin](./give_hand.png)
@@ -1565,12 +1591,34 @@ sugarcube-2:
         ![penisReduce_front](./penis_reduce_arrows.png)
         ![wash_skin](./wash_skin.png)
         ![wash_front](./wash_bubbles.png)
+        ![manacles_skin](./manacles_skin.png)
+        ![manacles_front](./manacles_front.png)
+        ![wraith_skin](./wraith_skin.png)
+        ![wraith_front](./wraith_front.png)
 
         `<<skinicon type>>`
         - **type**: `string` - type of icon to compose
-          - `"chef"` | `"give"` | `"waiter"` | `"hitchhike"` | `"masturbate"` | `"strip"` | `"pray"` | `"breastEnlarge"` | `"breastReduce"` | `"penisEnlarge"` | `"penisReduce"` | `"wash"` | `"manacles"`
+          - `"banish"`| `"chef"` | `"give"` | `"waiter"` | `"hitchhike"` | `"masturbate"` | `"strip"` | `"pray"` | `"breastEnlarge"` | `"breastReduce"` | `"penisEnlarge"` | `"penisReduce"` | `"wash"` | `"manacles"` | `"wraith"`
       parameters:
-        - '"chef"|"give"|"waiter"|"hitchhike"|"masturbate"|"strip"|"pray"|"breastEnlarge"|"breastReduce"|"penisEnlarge"|"penisReduce"|"wash"|"manacles"'
+        - "text|string"
+      tags: ["img"]
+    skyscrapericon:
+      description: |-
+        Prints an icon for Avery's skyscraper
+
+        ![bloodmoon](./skyscraper_bloodmoon.png)
+        ![construction](./skyscraper_construction.png)
+        ![fire](./skyscraper_fire.png)
+        ![ruins](./skyscraper_ruins.png)
+        ![night](./skyscraper_night.png)
+        ![default](./skyscraper_day.png)
+
+        `<<skyscrapericon iconName?>>`
+        - **iconName** _optional_: `string`
+          - `"bloodmoon"` | `"construction"` | `"fire"` | `"ruins"` | `"night"` | `default`
+      parameters:
+        - '|+ "bloodmoon"|"construction"|"fire"|"ruins"|"night"'
+      tags: ["img"]
     smokeicon:
       description: "![cig](./cig.png)"
       tags: ["img"]
@@ -1587,7 +1635,7 @@ sugarcube-2:
         ![volleyball](./volleyball.png)
         ![cinema](./ticket.png)
         ![ask](./birdTower/socialise_question.png)
-        ![dance](./dance.png)
+        ![dance](./dance.gif)
         ![default](./socialise.png)
 
         `<<socialiseicon iconName?>>`
@@ -1597,7 +1645,7 @@ sugarcube-2:
         - '|+ "angry"|"party"|"volleyball"|"cinema"|"dance"|"ask"'
       tags: ["img"]
     spaicon:
-      description:  |-
+      description: |-
         Prints a spa icon
 
         ![massage](./spa.gif)
@@ -1721,15 +1769,17 @@ sugarcube-2:
         ![email](./email.png)
         ![lightbulb](./lightbulb.gif)
         ![monitors](./monitors.png)
+        ![radio](./radio.png)
         ![torch](./torch.png)
+        ![usb](./usb.png)
         ![vcam](./vcam.png)
         ![default](./computer.png)
 
         `<<techicon iconName?>>`
         - **iconName** _optional_: `string` - interest point
-          - ``"camera"` | `"computer"` | `"email"` | `"lightbulb"` | `"monitors"` | `"torch"` | `"vcam"` | `default`
+          - ``"camera"` | `"computer"` | `"email"` | `"lightbulb"` | `"monitors"` | `"radio"` |  `"torch"` | `"usb"` | `"vcam"` | `default`
       parameters:
-        - '|+ "camera"|"computer"|"email"|"lightbulb"|"monitors"|"torch"|"vcam"'
+        - '|+ "camera"|"computer"|"email"|"lightbulb"|"monitors"|"radio"|"torch"|"usb"|"vcam"'
       tags: ["img"]
     templeicon:
       description: |-
@@ -1774,7 +1824,6 @@ sugarcube-2:
         ![bird_egg](.\tending\bird_egg.png)
         ![blackberry](.\tending\blackberry.png)
         ![blood_lemon](.\tending\blood_lemon.gif)
-        ![blood_lemon](.\tending\blood_lemon.png)
         ![breast_milk](.\tending\breast_milk.png)
         ![breastmilk](.\tending\breastmilk.png)
         ![broccoli](.\tending\broccoli.png)
@@ -1903,6 +1952,30 @@ sugarcube-2:
     wardrobeicon:
       description: "![wardrobeicon](./wardrobe.png)"
       tags: ["img"]
+    watericon:
+      description: |-
+        Prints a composite water icon of `deco` + `waterbase`
+
+        Usage:
+        `<<watericon "watertype[_location]">>`
+        Examples:
+        `<<watericon "waterfall">>`
+        `<<watericon "waterfall_wolfcave">>`
+
+        Available waterbase:
+        ![waterfall](./waterfall_base.gif)
+        ![waterside](./waterside_base.gif)
+        ![stream](./stream_base.gif)
+        ![pond](./pond_base.gif)
+
+        Available deco types:
+        | waterbase  | deco options         |
+        |------------|----------------------|
+        | waterfall  | "rock", "rockgreen"  |
+        | waterside  | "soil"               |
+        | stream     | "grass", "rock"      |
+        | pond       | "grass"              |
+      tags: ["img"]
     weatherIcon:
       description: |-
         Prints an icon based on the weather and time of day
@@ -1920,15 +1993,22 @@ sugarcube-2:
         ![stream](./stream.png)
         ![black dog](./blackdog.png)
         ![bw](./blackwolf.png)
+        ![entrance](./wolfcave_entrance.png)
+        ![inside](./wolfcave_inside.png)
+        ![outside](./wolfcave_outside.png)
+        ![pupsden](./wolfcave_pupsden.png)
+        ![hole](./wolfcave_hole.png)
+        ![wolf](./wolf_brown.png)
+        ![wolf play](./wolf_brown_play.png)
         ![ferocity](%workspaceDir%/img/ui/wolfferocity.png)
         ![harmony](%workspaceDir%/img/ui/wolfharmony.png)
         ![default](./wolves.png)
 
         `<<wolfcaveicon iconName?>>`
         - **iconName** _optional_: `string` - interest point
-          - `"pup"` | `"sleep"` | `"stream"` | `"black dog"` | `"bw"` | `"ferocity"` | `"harmony"` | `default`
+          - `"pup"` | `"sleep"` | `"stream"` | `"black dog"` | `"bw"` | `"ferocity"` | `"harmony"` | `"wolf"` | `"wolf play"` | `"inside"` | `"outside"` | `"pupsden"` | `"entrance"` | `"hole"` | `"children"` | `default`
       parameters:
-        - '|+ "pup"|"sleep"|"stream"|"black dog"|"bw"|"ferocity"|"harmony"'
+        - '|+ "pup"|"sleep"|"stream"|"black dog"|"bw"|"ferocity"|"harmony"|"wolf"|"wolf play"|"inside"|"outside"|"pupsden"|"entrance"|"hole"|"children"'
       tags: ["img"]
     wolficon:
       description: "![wolficon](./wolf.png)"
