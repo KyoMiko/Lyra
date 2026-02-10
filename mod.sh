@@ -3,6 +3,7 @@
 set -e
 
 #[
+#     "AU-A",   4096
 #     "AU-M",   2048
 #     "AU-F",   1024
 #     "GOOSE",  512
@@ -42,8 +43,9 @@ URL_APKSIGN=https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3
 # URL_AVATAR_BJ=https://gitgud.io/GTXMEGADUDE/double-cheeseburger/-/raw/master/Paril_BJ_BEEESSS_Addon.rar
 # URL_UCB=https://github.com/site098/mysterious/releases/download/%E9%A2%84%E5%8F%91%E5%B8%83/default.zip
 URL_DOLP_BASE="https://gitgud.io/Frostberg/degrees-of-lewdity-plus/-/archive/master/degrees-of-lewdity-plus-master.tar.gz?path=imagepacks"
-URL_AU_F="https://github.com/DoL-Lyra/assets/releases/download/assets/AUfemale.imgpack_v0.6.4.zip"
-URL_AU_M="https://github.com/DoL-Lyra/assets/releases/download/assets/AUmale.imgpack_v0.2.4.zip"
+URL_AU_F="https://github.com/DoL-Lyra/assets/releases/download/assets/AUfemale.imgpack.zip"
+URL_AU_M="https://github.com/DoL-Lyra/assets/releases/download/assets/AUmale.imgpack.zip"
+URL_AU_A="https://github.com/DoL-Lyra/assets/releases/download/assets/AUandrogynous.imgpack.zip"
 
 EXTRACT_DIR=extract # 解压目录
 OUTPUT_DIR=output   # 输出目录
@@ -145,18 +147,18 @@ fun_check_code() {
     OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-susato
     echo 128-Complete patch susato!
   fi
-  if [ $((MOD_CODE & 2)) -ne 0 ]; then
-    echo 2-Start patch cheat...
-    # fun_cheat
-    OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-cheat
-    echo 2-Complete patch cheat!
-  fi
-  if [ $((MOD_CODE & 4)) -ne 0 ]; then
-    echo 4-Start patch CSD...
-    # fun_csd
-    OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-csd
-    echo 4-Complete patch CSD!
-  fi
+  # if [ $((MOD_CODE & 2)) -ne 0 ]; then
+  #   echo 2-Start patch cheat...
+  #   # fun_cheat
+  #   OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-cheat
+  #   echo 2-Complete patch cheat!
+  # fi
+  # if [ $((MOD_CODE & 4)) -ne 0 ]; then
+  #   echo 4-Start patch CSD...
+  #   # fun_csd
+  #   OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-csd
+  #   echo 4-Complete patch CSD!
+  # fi
   if [ $((MOD_CODE & 8)) -ne 0 ]; then
     echo 8-Start patch sideview type BJ...
     fun_sideview_bj
@@ -192,6 +194,12 @@ fun_check_code() {
     fun_sideview_au_m
     OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-au-m
     echo 2048-Complete patch sideview type AU-M!
+  fi
+  if [ $((MOD_CODE & 4096)) -ne 0 ]; then
+    echo 4096-Start patch sideview type AU-A...
+    fun_sideview_au_a
+    OUTPUT_SUFFIX=${OUTPUT_SUFFIX}-au-a
+    echo 4096-Complete patch sideview type AU-A!
   fi
   if [ $((MOD_CODE & 256)) -ne 0 ]; then
     echo 256-Start patch Universal Combat Beautification...
@@ -360,6 +368,20 @@ fun_sideview_au_m() {
 
   cp -r $BEAUTIFY_DIR/* $IMG_PATH/
 }
+fun_sideview_au_a() {
+  BEAUTIFY_DIR="sideview_au_a"
+  mkdir -p $BEAUTIFY_DIR
+
+  pushd $BEAUTIFY_DIR || exit
+
+  wget -q -O au.zip "$URL_AU_A"
+  unzip -q au.zip
+  rm au.zip
+
+  popd || exit
+
+  cp -r $BEAUTIFY_DIR/* $IMG_PATH/
+}
 
 # UCB
 # fun_ucb() {
@@ -391,29 +413,27 @@ fun_ucb() {
 }
 
 # 入口
+
+ls -la
+
 if [[ ${MOD_CODE} = polyfill-* ]]; then
-  echo polyfill-6-Use cheat csd base
-  FILE_NAME=$(basename DoL*polyfill-6.$VERSION)
+  echo polyfill Use i18n cheat csd base
+  # 查找包含 polyfill 的文件
+  FILE_NAME=$(find . -maxdepth 1 -name "DoL*polyfill*.*" -type f | head -n 1 | sed 's|^\./||')
+  if [ -z "$FILE_NAME" ]; then
+    echo "Error: No polyfill file found"
+    exit 1
+  fi
   IS_POLYFILL=1
   MOD_CODE=$(echo $MOD_CODE | cut -d '-' -f 2)
-elif [ $MOD_CODE -eq 134 ]; then
-  echo 134-Use susato cheat csd
-  FILE_NAME=$(basename DoL*-134.$VERSION)
-elif [ $MOD_CODE -eq 132 ]; then
-  echo 132-Use susato csd
-  FILE_NAME=$(basename DoL*-132.$VERSION)
-elif [ $((MOD_CODE & 6)) -eq 6 ]; then
-  echo 6-Use cheat csd base
-  FILE_NAME=$(basename DoL*[^polyfill]-6.$VERSION)
-elif [ $((MOD_CODE & 4)) -eq 4 ]; then
-  echo 4-Use csd base
-  FILE_NAME=$(basename DoL*-4.$VERSION)
-elif [ $((MOD_CODE & 2)) -eq 2 ]; then
-  echo 2-Use cheat base
-  FILE_NAME=$(basename DoL*-2.$VERSION)
 else
-  echo 0-Use i18n only
-  FILE_NAME=$(basename DoL*-0.$VERSION)
+  echo Use i18n cheat csd base
+  # 查找不包含 polyfill 的文件
+  FILE_NAME=$(find . -maxdepth 1 -name "DoL*.*" -type f ! -name "*polyfill*" | head -n 1 | sed 's|^\./||')
+  if [ -z "$FILE_NAME" ]; then
+    echo "Error: No non-polyfill file found"
+    exit 1
+  fi
 fi
 
 case "$VERSION" in

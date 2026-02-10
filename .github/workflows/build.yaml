@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    tags:
-      - "*"
+    # tags:
+    #   - "*"
     paths-ignore:
       - "README.md"
       - "LICENSE"
@@ -51,36 +51,37 @@ jobs:
           # 解压apk
           java -jar $APKTOOL d *.APK -o modify_tmp/apk
 
-          ver=( 0 2 4 6 132 134 )
-          for v in "${ver[@]}"
-          do
-            dol_basename=$(basename DoL*[^polyfill]-${v}.zip .zip)
-            unzip -q ${dol_basename}.zip -d modify_tmp/zip
-            # 将zip的img覆盖到apk中
-            cp -r "modify_tmp/zip/img" "modify_tmp/apk/assets/www/"
-            # 将zip的html覆盖到apk中
-            cp "modify_tmp/zip/Degrees of Lewdity.html" "modify_tmp/apk/assets/www/index.html"
+          dol_filename=$(ls -1 DoL*.zip | grep -v "polyfill")
+          dol_basename=$(basename ${dol_filename} .zip)
+          unzip -q ${dol_basename}.zip -d modify_tmp/zip
+          # 将zip的img覆盖到apk中
+          cp -r "modify_tmp/zip/img" "modify_tmp/apk/assets/www/"
+          # 将zip的html覆盖到apk中
+          cp "modify_tmp/zip/Degrees of Lewdity.html" "modify_tmp/apk/assets/www/index.html"
 
-            # patch apk
-            pushd modify_tmp/apk/assets/www
-            patch < ${{ github.workspace }}/patches/0001-dol-android-save-to-file.patch
-            popd
+          # patch apk
+          pushd modify_tmp/apk/assets/www
+          patch < ${{ github.workspace }}/patches/0001-dol-android-save-to-file.patch
+          sed -i 's/saveAs(/cordova.plugins.saveDialog.saveFile(/g' index.html
+          rm -f index.html.orig
+          popd
 
-            # 打包
-            # zip
-            pushd modify_tmp/zip
-            zip -q -r ${dol_basename}.zip *
-            mv ${dol_basename}.zip ${{ github.workspace }}/output/
-            popd
-            # apk
-            java -jar $APKTOOL b modify_tmp/apk -o ${dol_basename}.apk
-            mv ${dol_basename}.apk ${{ github.workspace }}/output/
-            # 清理
-            rm -rf modify_tmp/zip
-          done
+          # 打包
+          # zip
+          pushd modify_tmp/zip
+          zip -q -r ${dol_basename}.zip *
+          mv ${dol_basename}.zip ${{ github.workspace }}/output/
+          popd
+          # apk
+          java -jar $APKTOOL b modify_tmp/apk -o ${dol_basename}.apk
+          mv ${dol_basename}.apk ${{ github.workspace }}/output/
+          # 清理
+          rm -rf modify_tmp/zip
+
 
           # polyfill
-          dol_basename=$(basename DoL*polyfill-6.zip .zip)
+          dol_filename=$(ls -1 DoL*.zip | grep "polyfill")
+          dol_basename=$(basename ${dol_filename} .zip)
           unzip -q ${dol_basename}.zip -d modify_tmp/zip
           # 将zip的img覆盖到apk中
           cp -r "modify_tmp/zip/img" "modify_tmp/apk/assets/www/"
@@ -115,7 +116,7 @@ jobs:
       fail-fast: true
       matrix:
         pack: [zip]
-        code:
+        code: 
           [
             263,
           ]
